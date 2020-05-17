@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update -y
 
 # install deps for erlang 22.3.2 and install erlang
-RUN apt-get install -y --no-install-recommends curl ca-certificates autoconf tar wget gnupg2 libsctp1 libwxgtk3.0-dev make inotify-tools
+RUN apt-get install -y --no-install-recommends curl ca-certificates autoconf tar wget gnupg2 libsctp1 libwxgtk3.0-dev make inotify-tools locales
 RUN wget https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_22.3.2-1~ubuntu~bionic_amd64.deb
 RUN dpkg -i esl-erlang_22.3.2-1~ubuntu~bionic_amd64.deb
 
